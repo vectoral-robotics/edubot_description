@@ -1,12 +1,14 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="omnibot">
 
-  <!-- Base link -->
+  <!-- ================= Base Link ================= -->
   <link name="base_link">
     <visual>
       <geometry>
         <mesh filename="package://omnibot_description/meshes/base.stl" scale="1 1 1"/>
       </geometry>
+      <!-- Base-Mesh auf Rädern platzieren -->
+      <origin xyz="0 0 0.09" rpy="0 0 0"/>
       <material name="blue">
         <color rgba="0.1 0.1 0.8 1"/>
       </material>
@@ -15,6 +17,7 @@
       <geometry>
         <mesh filename="package://omnibot_description/meshes/base.stl" scale="1 1 1"/>
       </geometry>
+      <origin xyz="0 0 0.09" rpy="0 0 0"/>
     </collision>
     <inertial>
       <mass value="5.0"/>
@@ -22,13 +25,15 @@
     </inertial>
   </link>
 
-  <!-- 4 Mecanum wheels using mesh -->
-  <xacro:macro name="wheel" params="name x y">
+  <!-- ================= Wheel Macro ================= -->
+  <xacro:macro name="wheel" params="name x y rpy_r rpy_p rpy_y">
     <link name="${name}">
       <visual>
         <geometry>
           <mesh filename="package://omnibot_description/meshes/wheel.stl" scale="1 1 1"/>
         </geometry>
+        <!-- Z = H_wheel/2 -->
+        <origin xyz="0 0 0.04" rpy="0 0 0"/>
         <material name="black">
           <color rgba="0.02 0.02 0.02 1"/>
         </material>
@@ -37,6 +42,7 @@
         <geometry>
           <mesh filename="package://omnibot_description/meshes/wheel.stl" scale="1 1 1"/>
         </geometry>
+        <origin xyz="0 0 0.04" rpy="0 0 0"/>
       </collision>
       <inertial>
         <mass value="0.2"/>
@@ -47,14 +53,16 @@
     <joint name="${name}_joint" type="continuous">
       <parent link="base_link"/>
       <child link="${name}"/>
-      <origin xyz="${x} ${y} -0.05" rpy="0 1.5708 0"/>
+      <!-- Position relativ zum base_link -->
+      <origin xyz="${x} ${y} 0" rpy="${rpy_r} ${rpy_p} ${rpy_y}"/>
       <axis xyz="0 1 0"/>
     </joint>
   </xacro:macro>
 
-  <xacro:wheel name="wheel_fl" x="0.12" y="0.12"/>
-  <xacro:wheel name="wheel_fr" x="0.12" y="-0.12"/>
-  <xacro:wheel name="wheel_rl" x="-0.12" y="0.12"/>
-  <xacro:wheel name="wheel_rr" x="-0.12" y="-0.12"/>
+  <!-- ================= Four Mecanum Wheels ================= -->
+  <xacro:wheel name="wheel_fl" x="0.12" y="0.12" rpy_r="0" rpy_p="0" rpy_y="0"/>
+  <xacro:wheel name="wheel_fr" x="0.12" y="-0.12" rpy_r="0" rpy_p="0" rpy_y="0"/>
+  <xacro:wheel name="wheel_rl" x="-0.12" y="0.12" rpy_r="0" rpy_p="0" rpy_y="0"/>
+  <xacro:wheel name="wheel_rr" x="-0.12" y="-0.12" rpy_r="0" rpy_p="0" rpy_y="0"/>
 
 </robot>

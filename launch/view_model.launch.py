@@ -1,51 +1,97 @@
-from launch import LaunchDescription
-from launch_ros.actions import Node
-from launch.actions import DeclareLaunchArgument
-from launch.substitutions import LaunchConfiguration, Command
-import os
+"""
+Launch file for visualizing the OmniBot robot description (URDF/Xacro).
 
-from ament_index_python.packages import get_package_share_directory
+Starts:
+  - joint_state_publisher_gui for interactive joint control
+  - robot_state_publisher to publish TFs from the URDF/Xacro
+  - optional RViz2 visualization with a predefined config
+"""
+
+from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument
+from launch.substitutions import LaunchConfiguration, Command, PathJoinSubstitution
+from launch_ros.actions import Node
+from launch_ros.substitutions import FindPackageShare
+from launch.conditions import IfCondition
+
 
 def generate_launch_description():
-    pkg_share = get_package_share_directory('omnibot_description')
-    default_model_path = os.path.join(pkg_share, 'urdf', 'omnibot.urdf.xacro')
-    default_rviz_config_path = os.path.join(pkg_share, 'urdf', 'view.rviz')
+    # ----------------------------------------------------------
+    # Default paths
+    # ----------------------------------------------------------
+    model_path = PathJoinSubstitution([
+        FindPackageShare('omnibot_description'),
+        'urdf',
+        'omnibot.urdf.xacro',
+    ])
+    rviz_config_path = PathJoinSubstitution([
+        FindPackageShare('omnibot_description'),
+        'urdf',
+        'view.rviz',
+    ])
 
+    # ----------------------------------------------------------
+    # Launch arguments
+    # ----------------------------------------------------------
+    declare_model = DeclareLaunchArgument(
+        'model',
+        default_value=model_path,
+        description='Path to the URDF/Xacro model file.',
+    )
+
+    declare_rvizconfig = DeclareLaunchArgument(
+        'rvizconfig',
+        default_value=rviz_config_path,
+        description='Path to the RViz configuration file.',
+    )
+
+    declare_use_rviz = DeclareLaunchArgument(
+        'use_rviz',
+        default_value='true',
+        description='Whether to start RViz2 automatically.',
+    )
+
+    # ----------------------------------------------------------
+    # Nodes
+    # ----------------------------------------------------------
+
+    # GUI to move joints manually
+    joint_state_publisher_gui = Node(
+        package='joint_state_publisher_gui',
+        executable='joint_state_publisher_gui',
+        name='joint_state_publisher_gui',
+        output='screen',
+    )
+
+    # Robot State Publisher (expands Xacro -> URDF -> TF)
+    robot_state_publisher = Node(
+        package='robot_state_publisher',
+        executable='robot_state_publisher',
+        name='robot_state_publisher',
+        output='screen',
+        parameters=[{
+            'robot_description': Command(['xacro ', LaunchConfiguration('model')]),
+        }],
+    )
+
+    # Optional RViz2 visualization
+    rviz = Node(
+        package='rviz2',
+        executable='rviz2',
+        name='rviz2',
+        output='screen',
+        arguments=['-d', LaunchConfiguration('rvizconfig')],
+        condition=IfCondition(LaunchConfiguration('use_rviz')),
+    )
+
+    # ----------------------------------------------------------
+    # LaunchDescription
+    # ----------------------------------------------------------
     return LaunchDescription([
-        DeclareLaunchArgument(
-            'model',
-            default_value=default_model_path,
-            description='Pfad zur URDF/Xacro Datei'
-        ),
-
-        DeclareLaunchArgument(
-            'rvizconfig',
-            default_value=default_rviz_config_path,
-            description='Pfad zur RViz Config'
-        ),
-
-        # Joint State Publisher GUI
-        Node(
-            package='joint_state_publisher_gui',
-            executable='joint_state_publisher_gui',
-            name='joint_state_publisher_gui'
-        ),
-
-        # Robot State Publisher mit Xacro expand
-        Node(
-            package='robot_state_publisher',
-            executable='robot_state_publisher',
-            name='robot_state_publisher',
-            parameters=[{
-                'robot_description': Command(['xacro ', LaunchConfiguration('model')])
-            }]
-        ),
-
-        Node(
-            package='rviz2',
-            executable='rviz2',
-            name='rviz2',
-            arguments=['-d', LaunchConfiguration('rvizconfig')],
-            output='screen'
-        )
+        declare_model,
+        declare_rvizconfig,
+        declare_use_rviz,
+        joint_state_publisher_gui,
+        robot_state_publisher,
+        rviz,
     ])

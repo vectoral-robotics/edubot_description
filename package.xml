@@ -2,18 +2,21 @@
 <package format="3">
   <name>omnibot_description</name>
   <version>0.0.1</version>
-  <description>URDF/Xacro description of the Omnidirectional Robot</description>
+  <description>
+    URDF/Xacro description package for the OmniBot robot.
+    Contains 3D meshes, Xacro definitions and visualization launch files.
+  </description>
 
-  <maintainer email="you@example.com">Your Name</maintainer>
+  <maintainer email="dev@siegler.one">Alex Petrovic, Stefan Siegler</maintainer>
   <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <!-- runtime dependencies -->
+  <!-- Runtime dependencies -->
+  <exec_depend>xacro</exec_depend>
   <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend>joint_state_publisher</exec_depend>
   <exec_depend>joint_state_publisher_gui</exec_depend>
-  <exec_depend>xacro</exec_depend>
   <exec_depend>rviz2</exec_depend>
 
   <export>

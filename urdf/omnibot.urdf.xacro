@@ -5,7 +5,7 @@
   <link name="base_link">
     <visual>
       <geometry>
-        <box size="0.3 0.3 0.1"/>
+        <mesh filename="package://omnibot_description/meshes/base.stl" scale="1 1 1"/>
       </geometry>
       <material name="blue">
         <color rgba="0.1 0.1 0.8 1"/>
@@ -13,7 +13,7 @@
     </visual>
     <collision>
       <geometry>
-        <box size="0.3 0.3 0.1"/>
+        <mesh filename="package://omnibot_description/meshes/base.stl" scale="1 1 1"/>
       </geometry>
     </collision>
     <inertial>
@@ -22,12 +22,12 @@
     </inertial>
   </link>
 
-  <!-- 4 Mecanum wheels (simplified as cylinders) -->
+  <!-- 4 Mecanum wheels using mesh -->
   <xacro:macro name="wheel" params="name x y">
     <link name="${name}">
       <visual>
         <geometry>
-          <cylinder radius="0.04" length="0.02"/>
+          <mesh filename="package://omnibot_description/meshes/wheel.stl" scale="1 1 1"/>
         </geometry>
         <material name="black">
           <color rgba="0.02 0.02 0.02 1"/>
@@ -35,7 +35,7 @@
       </visual>
       <collision>
         <geometry>
-          <cylinder radius="0.04" length="0.02"/>
+          <mesh filename="package://omnibot_description/meshes/wheel.stl" scale="1 1 1"/>
         </geometry>
       </collision>
       <inertial>

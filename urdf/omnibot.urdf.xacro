@@ -7,8 +7,7 @@
       <geometry>
         <mesh filename="package://omnibot_description/meshes/base.stl" scale="1 1 1"/>
       </geometry>
-      <!-- Base-Mesh auf Rädern platzieren -->
-      <origin xyz="0 0 0.09" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <material name="blue">
         <color rgba="0.1 0.1 0.8 1"/>
       </material>
@@ -17,7 +16,7 @@
       <geometry>
         <mesh filename="package://omnibot_description/meshes/base.stl" scale="1 1 1"/>
       </geometry>
-      <origin xyz="0 0 0.09" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
     </collision>
     <inertial>
       <mass value="5.0"/>
@@ -25,44 +24,126 @@
     </inertial>
   </link>
 
-  <!-- ================= Wheel Macro ================= -->
-  <xacro:macro name="wheel" params="name x y rpy_r rpy_p rpy_y">
-    <link name="${name}">
-      <visual>
-        <geometry>
-          <mesh filename="package://omnibot_description/meshes/wheel.stl" scale="1 1 1"/>
-        </geometry>
-        <!-- Z = H_wheel/2 -->
-        <origin xyz="0 0 0.04" rpy="0 0 0"/>
-        <material name="black">
-          <color rgba="0.02 0.02 0.02 1"/>
-        </material>
-      </visual>
-      <collision>
-        <geometry>
-          <mesh filename="package://omnibot_description/meshes/wheel.stl" scale="1 1 1"/>
-        </geometry>
-        <origin xyz="0 0 0.04" rpy="0 0 0"/>
-      </collision>
-      <inertial>
-        <mass value="0.2"/>
-        <inertia ixx="0.001" iyy="0.001" izz="0.001" ixy="0" ixz="0" iyz="0"/>
-      </inertial>
-    </link>
-
-    <joint name="${name}_joint" type="continuous">
-      <parent link="base_link"/>
-      <child link="${name}"/>
-      <!-- Position relativ zum base_link -->
-      <origin xyz="${x} ${y} 0" rpy="${rpy_r} ${rpy_p} ${rpy_y}"/>
-      <axis xyz="0 1 0"/>
-    </joint>
-  </xacro:macro>
-
   <!-- ================= Four Mecanum Wheels ================= -->
-  <xacro:wheel name="wheel_fl" x="0.12" y="0.12" rpy_r="0" rpy_p="0" rpy_y="0"/>
-  <xacro:wheel name="wheel_fr" x="0.12" y="-0.12" rpy_r="0" rpy_p="0" rpy_y="0"/>
-  <xacro:wheel name="wheel_rl" x="-0.12" y="0.12" rpy_r="0" rpy_p="0" rpy_y="0"/>
-  <xacro:wheel name="wheel_rr" x="-0.12" y="-0.12" rpy_r="0" rpy_p="0" rpy_y="0"/>
+
+  <!-- Front Left Wheel -->
+  <link name="wheel_fl">
+    <visual>
+      <geometry>
+        <mesh filename="package://omnibot_description/meshes/wheel_fl.stl" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="-0.088 0.100 0.0" rpy="0 0 0"/>
+      <material name="black">
+        <color rgba="0.02 0.02 0.02 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://omnibot_description/meshes/wheel_fl.stl" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <inertia ixx="0.001" iyy="0.001" izz="0.001" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+  <joint name="wheel_fl_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_fl"/>
+    <origin xyz="0.088 -0.100 0.0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- Front Right Wheel -->
+  <link name="wheel_fr">
+    <visual>
+      <geometry>
+        <mesh filename="package://omnibot_description/meshes/wheel_fr.stl" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="-0.088 0.100 0.0" rpy="0 0 0"/>
+      <material name="black">
+        <color rgba="0.02 0.02 0.02 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://omnibot_description/meshes/wheel_fr.stl" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <inertia ixx="0.001" iyy="0.001" izz="0.001" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+  <joint name="wheel_fr_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_fr"/>
+    <origin xyz="0.088 -0.100 0.0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- Rear Left Wheel -->
+  <link name="wheel_rl">
+    <visual>
+      <geometry>
+        <mesh filename="package://omnibot_description/meshes/wheel_rl.stl" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0.103 -0.100 0" rpy="0 0 0"/>
+      <material name="black">
+        <color rgba="0.02 0.02 0.02 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://omnibot_description/meshes/wheel_rl.stl" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <inertia ixx="0.001" iyy="0.001" izz="0.001" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+  <joint name="wheel_rl_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_rl"/>
+    <origin xyz="-0.103 0.100 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- Rear Right Wheel -->
+  <link name="wheel_rr">
+    <visual>
+      <geometry>
+        <mesh filename="package://omnibot_description/meshes/wheel_rr.stl" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0.103 -0.100 0" rpy="0 0 0"/>
+      <material name="black">
+        <color rgba="0.02 0.02 0.02 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://omnibot_description/meshes/wheel_rr.stl" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <inertia ixx="0.001" iyy="0.001" izz="0.001" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+  <joint name="wheel_rr_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_rr"/>
+    <origin xyz="-0.103 0.100 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
 
 </robot>

@@ -1,0 +1,253 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape https://cad.onshape.com/documents/244f5ecfaccb481348bd4c8c/w/26ba82ba5ad81d26c481a664/e/06b598d0d8b4099a0f4d1c8c -->
+<robot name="omnibot-onshape">
+  <!-- Link base -->
+  <link name="base">
+    <inertial>
+      <origin xyz="0.00080165 -0.00280666 0.0170416" rpy="0 0 0"/>
+      <mass value="0.427697"/>
+      <inertia ixx="0.00332604" ixy="4.25549e-06" ixz="4.91749e-06" iyy="0.00189899" iyz="3.63935e-06" izz="0.00495163"/>
+    </inertial>
+    <!-- Part part_9 -->
+    <visual>
+      <origin xyz="0 0 -0.0002" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/part_9.stl"/>
+      </geometry>
+      <material name="part_9_material">
+        <color rgba="0.4 0.4 0.4 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.0002" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/part_9.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part rear_axle -->
+    <visual>
+      <origin xyz="-0.0119779 0.190692 0.018986" rpy="0 -0 1.5708"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/rear_axle.stl"/>
+      </geometry>
+      <material name="rear_axle_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0119779 0.190692 0.018986" rpy="0 -0 1.5708"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/rear_axle.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part base -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/base.stl"/>
+      </geometry>
+      <material name="base_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/base.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part rear_axle_2 -->
+    <visual>
+      <origin xyz="-0.0119779 0.0166922 0.018986" rpy="0 -0 1.5708"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/rear_axle.stl"/>
+      </geometry>
+      <material name="rear_axle_2_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0119779 0.0166922 0.018986" rpy="0 -0 1.5708"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/rear_axle.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part rear_axle_3 -->
+    <visual>
+      <origin xyz="0.0119779 -0.0166922 0.018986" rpy="0 0 -1.5708"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/rear_axle.stl"/>
+      </geometry>
+      <material name="rear_axle_3_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0119779 -0.0166922 0.018986" rpy="0 0 -1.5708"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/rear_axle.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part part_2 -->
+    <visual>
+      <origin xyz="-8.57087e-06 9.61595e-07 -5.51718e-05" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/part_2.stl"/>
+      </geometry>
+      <material name="part_2_material">
+        <color rgba="0.647059 0.647059 0.647059 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-8.57087e-06 9.61595e-07 -5.51718e-05" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/part_2.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part rear_axle_4 -->
+    <visual>
+      <origin xyz="0.0119779 -0.19069 0.018986" rpy="0 -0 -1.5708"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/rear_axle.stl"/>
+      </geometry>
+      <material name="rear_axle_4_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0119779 -0.19069 0.018986" rpy="0 -0 -1.5708"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/rear_axle.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link omni_wheel_fl -->
+  <link name="omni_wheel_fl">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part omni_wheel_fl -->
+    <visual>
+      <origin xyz="0.0859713 -0.15763 0.297561" rpy="-1.5708 -0 -0"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/omni_wheel_fl.stl"/>
+      </geometry>
+      <material name="omni_wheel_fl_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0859713 -0.15763 0.297561" rpy="-1.5708 -0 -0"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/omni_wheel_fl.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from base to omni_wheel_fl -->
+  <joint name="wheel_fl" type="continuous">
+    <origin xyz="0.0924914 -0.087 0.0185" rpy="-0 -1.5708 0"/>
+    <parent link="base"/>
+    <child link="omni_wheel_fl"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link omni_wheel_rl -->
+  <link name="omni_wheel_rl">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part omni_wheel_rl -->
+    <visual>
+      <origin xyz="-0.106119 0.157984 -0.140943" rpy="1.5708 -0 0"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/omni_wheel_rl.stl"/>
+      </geometry>
+      <material name="omni_wheel_rl_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.106119 0.157984 -0.140943" rpy="1.5708 -0 0"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/omni_wheel_rl.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from base to omni_wheel_rl -->
+  <joint name="wheel_rl" type="continuous">
+    <origin xyz="0.0897148 0.086999 0.0184759" rpy="-1.5708 -0 1.5708"/>
+    <parent link="base"/>
+    <child link="omni_wheel_rl"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link omni_wheel_rr -->
+  <link name="omni_wheel_rr">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part omni_wheel_rr -->
+    <visual>
+      <origin xyz="0.0859713 0.15763 -0.140943" rpy="1.5708 -0 0"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/omni_wheel_rr.stl"/>
+      </geometry>
+      <material name="omni_wheel_rr_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0859713 0.15763 -0.140943" rpy="1.5708 -0 0"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/omni_wheel_rr.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from base to omni_wheel_rr -->
+  <joint name="wheel_rr" type="continuous">
+    <origin xyz="-0.0897148 0.087001 0.0184759" rpy="1.5708 -0 1.5708"/>
+    <parent link="base"/>
+    <child link="omni_wheel_rr"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link omni_wheel_fr -->
+  <link name="omni_wheel_fr">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part omni_wheel_fr -->
+    <visual>
+      <origin xyz="-0.106119 -0.157274 0.296978" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/omni_wheel_fr.stl"/>
+      </geometry>
+      <material name="omni_wheel_fr_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.106119 -0.157274 0.296978" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://omnibot_description/assets/omni_wheel_fr.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from base to omni_wheel_fr -->
+  <joint name="wheel_fr" type="continuous">
+    <origin xyz="-0.0897148 -0.086999 0.0184759" rpy="-3.14159 -1.5708 0"/>
+    <parent link="base"/>
+    <child link="omni_wheel_fr"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+</robot>

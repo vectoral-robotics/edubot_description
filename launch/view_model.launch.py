@@ -23,7 +23,7 @@ def generate_launch_description():
     model_path = PathJoinSubstitution([
         FindPackageShare('omnibot_description'),
         'urdf',
-        'omnibot.urdf.xacro',
+        'robot.urdf',
     ])
     rviz_config_path = PathJoinSubstitution([
         FindPackageShare('omnibot_description'),

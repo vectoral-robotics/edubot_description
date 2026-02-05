@@ -5,7 +5,7 @@ find_package(ament_cmake REQUIRED)
 
 # Install robot description files
 install(
-  DIRECTORY urdf meshes launch
+  DIRECTORY urdf assets launch
   DESTINATION share/${PROJECT_NAME}
 )
 

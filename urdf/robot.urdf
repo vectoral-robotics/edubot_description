@@ -3,7 +3,7 @@
 <!-- Onshape https://cad.onshape.com/documents/244f5ecfaccb481348bd4c8c/w/26ba82ba5ad81d26c481a664/e/06b598d0d8b4099a0f4d1c8c -->
 <robot name="omnibot-onshape">
   <!-- Link base -->
-  <link name="base">
+  <link name="base_link">
     <inertial>
       <origin xyz="0.00080165 -0.00280666 0.0170416" rpy="0 0 0"/>
       <mass value="0.427697"/>
@@ -149,7 +149,7 @@
   <!-- Joint from base to omni_wheel_fl -->
   <joint name="wheel_fl" type="continuous">
     <origin xyz="0.0924914 -0.087 0.0185" rpy="-0 -1.5708 0"/>
-    <parent link="base"/>
+    <parent link="base_link"/>
     <child link="omni_wheel_fl"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10"/>
@@ -181,7 +181,7 @@
   <!-- Joint from base to omni_wheel_rl -->
   <joint name="wheel_rl" type="continuous">
     <origin xyz="0.0897148 0.086999 0.0184759" rpy="-1.5708 -0 1.5708"/>
-    <parent link="base"/>
+    <parent link="base_link"/>
     <child link="omni_wheel_rl"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10"/>
@@ -213,7 +213,7 @@
   <!-- Joint from base to omni_wheel_rr -->
   <joint name="wheel_rr" type="continuous">
     <origin xyz="-0.0897148 0.087001 0.0184759" rpy="1.5708 -0 1.5708"/>
-    <parent link="base"/>
+    <parent link="base_link"/>
     <child link="omni_wheel_rr"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10"/>
@@ -245,7 +245,7 @@
   <!-- Joint from base to omni_wheel_fr -->
   <joint name="wheel_fr" type="continuous">
     <origin xyz="-0.0897148 -0.086999 0.0184759" rpy="-3.14159 -1.5708 0"/>
-    <parent link="base"/>
+    <parent link="base_link"/>
     <child link="omni_wheel_fr"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10"/>

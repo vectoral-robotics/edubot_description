@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(omnibot_description)
+project(edubot_description)
 
 find_package(ament_cmake REQUIRED)
 

@@ -1,5 +1,5 @@
 """
-Launch file for visualizing the OmniBot robot description (URDF/Xacro).
+Launch file for visualizing the EduBot robot description (URDF/Xacro).
 
 Starts:
   - joint_state_publisher_gui for interactive joint control
@@ -21,12 +21,12 @@ def generate_launch_description():
     # Default paths
     # ----------------------------------------------------------
     model_path = PathJoinSubstitution([
-        FindPackageShare('omnibot_description'),
+        FindPackageShare('edubot_description'),
         'urdf',
         'robot.urdf',
     ])
     rviz_config_path = PathJoinSubstitution([
-        FindPackageShare('omnibot_description'),
+        FindPackageShare('edubot_description'),
         'urdf',
         'view.rviz',
     ])

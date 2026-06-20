@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="omnibot">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="edubot">
 
   <!-- ================= Base Link ================= -->
   <link name="base_link">
     <visual>
       <geometry>
-        <mesh filename="package://omnibot_description/meshes/base.stl" scale="1 1 1"/>
+        <mesh filename="package://edubot_description/meshes/base.stl" scale="1 1 1"/>
       </geometry>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <material name="blue">
@@ -14,7 +14,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://omnibot_description/meshes/base.stl" scale="1 1 1"/>
+        <mesh filename="package://edubot_description/meshes/base.stl" scale="1 1 1"/>
       </geometry>
       <origin xyz="0 0 0" rpy="0 0 0"/>
     </collision>
@@ -30,7 +30,7 @@
   <link name="wheel_fl">
     <visual>
       <geometry>
-        <mesh filename="package://omnibot_description/meshes/wheel_fl.stl" scale="1 1 1"/>
+        <mesh filename="package://edubot_description/meshes/wheel_fl.stl" scale="1 1 1"/>
       </geometry>
       <origin xyz="-0.088 -0.100 0.0" rpy="0 0 0"/>
       <material name="black">
@@ -39,7 +39,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://omnibot_description/meshes/wheel_fl.stl" scale="1 1 1"/>
+        <mesh filename="package://edubot_description/meshes/wheel_fl.stl" scale="1 1 1"/>
       </geometry>
       <origin xyz="0 0 0" rpy="0 0 0"/>
     </collision>
@@ -60,7 +60,7 @@
   <link name="wheel_fr">
     <visual>
       <geometry>
-        <mesh filename="package://omnibot_description/meshes/wheel_fr.stl" scale="1 1 1"/>
+        <mesh filename="package://edubot_description/meshes/wheel_fr.stl" scale="1 1 1"/>
       </geometry>
       <origin xyz="-0.088 0.100 0.0" rpy="0 0 0"/>
       <material name="black">
@@ -69,7 +69,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://omnibot_description/meshes/wheel_fr.stl" scale="1 1 1"/>
+        <mesh filename="package://edubot_description/meshes/wheel_fr.stl" scale="1 1 1"/>
       </geometry>
       <origin xyz="0 0 0" rpy="0 0 0"/>
     </collision>
@@ -90,7 +90,7 @@
   <link name="wheel_rl">
     <visual>
       <geometry>
-        <mesh filename="package://omnibot_description/meshes/wheel_rl.stl" scale="1 1 1"/>
+        <mesh filename="package://edubot_description/meshes/wheel_rl.stl" scale="1 1 1"/>
       </geometry>
       <origin xyz="0.103 -0.100 0" rpy="0 0 0"/>
       <material name="black">
@@ -99,7 +99,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://omnibot_description/meshes/wheel_rl.stl" scale="1 1 1"/>
+        <mesh filename="package://edubot_description/meshes/wheel_rl.stl" scale="1 1 1"/>
       </geometry>
       <origin xyz="0 0 0" rpy="0 0 0"/>
     </collision>
@@ -120,7 +120,7 @@
   <link name="wheel_rr">
     <visual>
       <geometry>
-        <mesh filename="package://omnibot_description/meshes/wheel_rr.stl" scale="1 1 1"/>
+        <mesh filename="package://edubot_description/meshes/wheel_rr.stl" scale="1 1 1"/>
       </geometry>
       <origin xyz="0.103 0.100 0" rpy="0 0 0"/>
       <material name="black">
@@ -129,7 +129,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://omnibot_description/meshes/wheel_rr.stl" scale="1 1 1"/>
+        <mesh filename="package://edubot_description/meshes/wheel_rr.stl" scale="1 1 1"/>
       </geometry>
       <origin xyz="0 0 0" rpy="0 0 0"/>
     </collision>

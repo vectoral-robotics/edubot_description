@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package format="3">
-  <name>omnibot_description</name>
+  <name>edubot_description</name>
   <version>0.0.1</version>
   <description>
-    URDF/Xacro description package for the OmniBot robot.
+    URDF/Xacro description package for the EduBot robot.
     Contains 3D meshes, Xacro definitions and visualization launch files.
   </description>
 

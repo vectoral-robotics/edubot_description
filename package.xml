@@ -7,8 +7,12 @@
     Contains 3D meshes, Xacro definitions and visualization launch files.
   </description>
 
-  <maintainer email="dev@siegler.one">Alex Petrovic, Stefan Siegler</maintainer>
+  <maintainer email="info@vectoral.ch">Vectoral</maintainer>
+  <author>Alex Petrovic</author>
+  <author>Stefan Siegler</author>
   <license>Apache-2.0</license>
+
+  <url type="repository">https://github.com/vectoral-robotics/edubot_description</url>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 

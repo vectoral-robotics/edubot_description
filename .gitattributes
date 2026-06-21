@@ -1,0 +1,10 @@
+# Normalize line endings: store everything with LF in the repo.
+* text=auto eol=lf
+
+# 3D assets and images are binary.
+*.stl   binary
+*.dae   binary
+*.STL   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary

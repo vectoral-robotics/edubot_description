@@ -1,13 +1,13 @@
 {
     "configuration": "default",
     "documentId": "244f5ecfaccb481348bd4c8c",
-    "documentMicroversion": "ed27003b6865127e6a507603",
-    "elementId": "778452a0be6128d19cda1838",
+    "documentMicroversion": "2e1e8108eaa1316d078ef7a1",
+    "elementId": "5a4ebaf621d3e370aed8789d",
     "fullConfiguration": "default",
-    "id": "MA/xzACe0qAqAB/iz",
+    "id": "MbMBUm0Wg3zZ11iHG",
     "isStandardContent": false,
-    "name": "Part 9 <1>",
-    "partId": "RoED",
+    "name": "eth_plug <1>",
+    "partId": "JHD",
     "suppressed": false,
     "type": "Part"
 }

@@ -1,13 +1,13 @@
 {
     "configuration": "default",
     "documentId": "244f5ecfaccb481348bd4c8c",
-    "documentMicroversion": "ed27003b6865127e6a507603",
-    "elementId": "778452a0be6128d19cda1838",
+    "documentMicroversion": "2e1e8108eaa1316d078ef7a1",
+    "elementId": "29479b4c6b9fafa1f62cc4e1",
     "fullConfiguration": "default",
-    "id": "M19qwhoi0oTODMSOw",
+    "id": "MYlHIurX7z5pDwsTy",
     "isStandardContent": false,
-    "name": "Part 6 <1>",
-    "partId": "JlD",
+    "name": "battery <1>",
+    "partId": "JHD",
     "suppressed": false,
     "type": "Part"
 }

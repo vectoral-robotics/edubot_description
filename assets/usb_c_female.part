@@ -2,12 +2,12 @@
     "configuration": "default",
     "documentId": "244f5ecfaccb481348bd4c8c",
     "documentMicroversion": "2e1e8108eaa1316d078ef7a1",
-    "elementId": "3da784a328766107b82dd1c2",
+    "elementId": "8f7fd9112b16142c849b9953",
     "fullConfiguration": "default",
-    "id": "M2UX8LY5uS9vF5bA9",
+    "id": "MIhcQ4gVa8JvkJsjI",
     "isStandardContent": false,
-    "name": "Omni_Wheel_RR <6>",
-    "partId": "JFD",
+    "name": "usb-c-female <2>",
+    "partId": "JHD",
     "suppressed": false,
     "type": "Part"
 }

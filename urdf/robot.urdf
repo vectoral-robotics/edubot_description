@@ -343,7 +343,7 @@
     <origin xyz="0.0874013 0.0924166 0.0196934" rpy="1.5708 -1.53297 -0"/>
     <parent link="base_link"/>
     <child link="omni_wheel_fl"/>
-    <axis xyz="0 0 1"/>
+    <axis xyz="0 0 -1"/>
     <limit effort="10" velocity="10"/>
   </joint>
   <!-- Link omni_wheel_rl -->
@@ -375,7 +375,7 @@
     <origin xyz="-0.086599 0.0896399 0.0184759" rpy="-1.5708 -0 -3.14159"/>
     <parent link="base_link"/>
     <child link="omni_wheel_rl"/>
-    <axis xyz="0 0 1"/>
+    <axis xyz="0 0 -1"/>
     <limit effort="10" velocity="10"/>
   </joint>
   <!-- Link omni_wheel_rr -->

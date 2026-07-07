@@ -1,13 +1,13 @@
 {
     "configuration": "default",
     "documentId": "244f5ecfaccb481348bd4c8c",
-    "documentMicroversion": "ed27003b6865127e6a507603",
+    "documentMicroversion": "2e1e8108eaa1316d078ef7a1",
     "elementId": "778452a0be6128d19cda1838",
     "fullConfiguration": "default",
-    "id": "MwrfJNcV7x4BNzM6U",
+    "id": "M4Xg5ME7IbZgTSkrL",
     "isStandardContent": false,
-    "name": "Part 2 <3>",
-    "partId": "JYD",
+    "name": "rear_plate <1>",
+    "partId": "JfD",
     "suppressed": false,
     "type": "Part"
 }

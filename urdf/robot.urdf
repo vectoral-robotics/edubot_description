@@ -1,124 +1,316 @@
 <?xml version="1.0" ?>
 <!-- Generated using onshape-to-robot -->
 <!-- Onshape https://cad.onshape.com/documents/244f5ecfaccb481348bd4c8c/w/26ba82ba5ad81d26c481a664/e/06b598d0d8b4099a0f4d1c8c -->
-<robot name="edubot-onshape">
-  <!-- Link base -->
+<robot name="omnibot-onshape">
+  <!-- Link base_link -->
   <link name="base_link">
     <inertial>
-      <origin xyz="0.00080165 -0.00280666 0.0170416" rpy="0 0 0"/>
-      <mass value="0.427697"/>
-      <inertia ixx="0.00332604" ixy="4.25549e-06" ixz="4.91749e-06" iyy="0.00189899" iyz="3.63935e-06" izz="0.00495163"/>
+      <origin xyz="0.00354865 0.00137903 0.0172313" rpy="0 0 0"/>
+      <mass value="0.421125"/>
+      <inertia ixx="0.00186809" ixy="4.25933e-06" ixz="-9.50638e-07" iyy="0.00330506" iyz="9.2659e-06" izz="0.0049031"/>
     </inertial>
-    <!-- Part part_9 -->
+    <!-- Part rear_plate -->
     <visual>
-      <origin xyz="0 0 -0.0002" rpy="0 -0 0"/>
+      <origin xyz="0.0004 -9.11144e-05 -0" rpy="0 -0 1.5708"/>
       <geometry>
-        <mesh filename="package://edubot_description/assets/part_9.stl"/>
+        <mesh filename="package://edubot_description/assets/rear_plate.stl"/>
       </geometry>
-      <material name="part_9_material">
+      <material name="rear_plate_material">
+        <color rgba="0.811765 0.858824 0.898039 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0004 -9.11144e-05 -0" rpy="0 -0 1.5708"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/rear_plate.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part usb_c_female -->
+    <visual>
+      <origin xyz="-0.104851 -0.0310834 0.0539448" rpy="-1.5708 -0 0"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/usb_c_female.stl"/>
+      </geometry>
+      <material name="usb_c_female_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.104851 -0.0310834 0.0539448" rpy="-1.5708 -0 0"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/usb_c_female.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part upper_plate -->
+    <visual>
+      <origin xyz="0.0004 -7.48745e-05 0" rpy="0 -0 1.5708"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/upper_plate.stl"/>
+      </geometry>
+      <material name="upper_plate_material">
         <color rgba="0.4 0.4 0.4 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 -0.0002" rpy="0 -0 0"/>
+      <origin xyz="0.0004 -7.48745e-05 0" rpy="0 -0 1.5708"/>
       <geometry>
-        <mesh filename="package://edubot_description/assets/part_9.stl"/>
+        <mesh filename="package://edubot_description/assets/upper_plate.stl"/>
       </geometry>
     </collision>
-    <!-- Part rear_axle -->
+    <!-- Part usb_c_female_2 -->
     <visual>
-      <origin xyz="-0.0119779 0.190692 0.018986" rpy="0 -0 1.5708"/>
+      <origin xyz="-0.1056 -0.0200911 0.018" rpy="1.5708 1.5708 0"/>
       <geometry>
-        <mesh filename="package://edubot_description/assets/rear_axle.stl"/>
+        <mesh filename="package://edubot_description/assets/usb_c_female.stl"/>
       </geometry>
-      <material name="rear_axle_material">
+      <material name="usb_c_female_2_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.1056 -0.0200911 0.018" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/usb_c_female.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part switch -->
+    <visual>
+      <origin xyz="-0.0906 0.0199089 0.018" rpy="3.14159 -0 1.5708"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/switch.stl"/>
+      </geometry>
+      <material name="switch_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0906 0.0199089 0.018" rpy="3.14159 -0 1.5708"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/switch.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part front_plate -->
+    <visual>
+      <origin xyz="0.0004 -7.48745e-05 0" rpy="0 -0 1.5708"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/front_plate.stl"/>
+      </geometry>
+      <material name="front_plate_material">
+        <color rgba="0.811765 0.858824 0.898039 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0004 -7.48745e-05 0" rpy="0 -0 1.5708"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/front_plate.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part usb_c_female_3 -->
+    <visual>
+      <origin xyz="-0.104851 0.0309166 0.0539448" rpy="-1.5708 0 -3.14159"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/usb_c_female.stl"/>
+      </geometry>
+      <material name="usb_c_female_3_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.104851 0.0309166 0.0539448" rpy="-1.5708 0 -3.14159"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/usb_c_female.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part axle -->
+    <visual>
+      <origin xyz="-0.190292 -0.0120527 0.018986" rpy="0 -0 -3.14159"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/axle.stl"/>
+      </geometry>
+      <material name="axle_material">
         <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.0119779 0.190692 0.018986" rpy="0 -0 1.5708"/>
+      <origin xyz="-0.190292 -0.0120527 0.018986" rpy="0 -0 -3.14159"/>
       <geometry>
-        <mesh filename="package://edubot_description/assets/rear_axle.stl"/>
+        <mesh filename="package://edubot_description/assets/axle.stl"/>
       </geometry>
     </collision>
-    <!-- Part base -->
+    <!-- Part base_link -->
     <visual>
-      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <origin xyz="0.0004 -7.48745e-05 0" rpy="0 -0 1.5708"/>
       <geometry>
-        <mesh filename="package://edubot_description/assets/base.stl"/>
+        <mesh filename="package://edubot_description/assets/base_link.stl"/>
       </geometry>
-      <material name="base_material">
+      <material name="base_link_material">
         <color rgba="0.439216 0.47451 0.501961 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <origin xyz="0.0004 -7.48745e-05 0" rpy="0 -0 1.5708"/>
       <geometry>
-        <mesh filename="package://edubot_description/assets/base.stl"/>
+        <mesh filename="package://edubot_description/assets/base_link.stl"/>
       </geometry>
     </collision>
-    <!-- Part rear_axle_2 -->
+    <!-- Part axle_2 -->
     <visual>
-      <origin xyz="-0.0119779 0.0166922 0.018986" rpy="0 -0 1.5708"/>
+      <origin xyz="-0.0162922 -0.0120527 0.018986" rpy="0 -0 -3.14159"/>
       <geometry>
-        <mesh filename="package://edubot_description/assets/rear_axle.stl"/>
+        <mesh filename="package://edubot_description/assets/axle.stl"/>
       </geometry>
-      <material name="rear_axle_2_material">
+      <material name="axle_2_material">
         <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.0119779 0.0166922 0.018986" rpy="0 -0 1.5708"/>
+      <origin xyz="-0.0162922 -0.0120527 0.018986" rpy="0 -0 -3.14159"/>
       <geometry>
-        <mesh filename="package://edubot_description/assets/rear_axle.stl"/>
+        <mesh filename="package://edubot_description/assets/axle.stl"/>
       </geometry>
     </collision>
-    <!-- Part rear_axle_3 -->
+    <!-- Part battery -->
     <visual>
-      <origin xyz="0.0119779 -0.0166922 0.018986" rpy="0 0 -1.5708"/>
+      <origin xyz="0.000184983 -0.0270749 0.03125" rpy="-3.14159 1.5708 0"/>
       <geometry>
-        <mesh filename="package://edubot_description/assets/rear_axle.stl"/>
+        <mesh filename="package://edubot_description/assets/battery.stl"/>
       </geometry>
-      <material name="rear_axle_3_material">
+      <material name="battery_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.000184983 -0.0270749 0.03125" rpy="-3.14159 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/battery.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part left_plate -->
+    <visual>
+      <origin xyz="0.0004 -7.48745e-05 0" rpy="0 -0 1.5708"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/left_plate.stl"/>
+      </geometry>
+      <material name="left_plate_material">
+        <color rgba="0.811765 0.858824 0.898039 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0004 -7.48745e-05 0" rpy="0 -0 1.5708"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/left_plate.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part eth_plug -->
+    <visual>
+      <origin xyz="-0.104851 -8.34454e-05 0.0499448" rpy="-1.5708 -0 1.5708"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/eth_plug.stl"/>
+      </geometry>
+      <material name="eth_plug_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.104851 -8.34454e-05 0.0499448" rpy="-1.5708 -0 1.5708"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/eth_plug.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part right_plate -->
+    <visual>
+      <origin xyz="0.0004 -7.48745e-05 3.35123e-06" rpy="0 -0 1.5708"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/right_plate.stl"/>
+      </geometry>
+      <material name="right_plate_material">
+        <color rgba="0.811765 0.858824 0.898039 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0004 -7.48745e-05 3.35123e-06" rpy="0 -0 1.5708"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/right_plate.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part cam_holder -->
+    <visual>
+      <origin xyz="0.000399998 -7.48745e-05 -0.0003" rpy="0 -0 1.5708"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/cam_holder.stl"/>
+      </geometry>
+      <material name="cam_holder_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.000399998 -7.48745e-05 -0.0003" rpy="0 -0 1.5708"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/cam_holder.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part cam -->
+    <visual>
+      <origin xyz="0.1264 -7.48745e-05 0.048" rpy="3.14159 -0 -1.5708"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/cam.stl"/>
+      </geometry>
+      <material name="cam_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.1264 -7.48745e-05 0.048" rpy="3.14159 -0 -1.5708"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/cam.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part axle_3 -->
+    <visual>
+      <origin xyz="0.0170922 0.011903 0.018986" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://edubot_description/assets/axle.stl"/>
+      </geometry>
+      <material name="axle_3_material">
         <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0119779 -0.0166922 0.018986" rpy="0 0 -1.5708"/>
+      <origin xyz="0.0170922 0.011903 0.018986" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://edubot_description/assets/rear_axle.stl"/>
+        <mesh filename="package://edubot_description/assets/axle.stl"/>
       </geometry>
     </collision>
-    <!-- Part part_2 -->
+    <!-- Part plug_mount -->
     <visual>
-      <origin xyz="-8.57087e-06 9.61595e-07 -5.51718e-05" rpy="0 -0 0"/>
+      <origin xyz="0.000399038 -8.34454e-05 -5.51718e-05" rpy="0 -0 1.5708"/>
       <geometry>
-        <mesh filename="package://edubot_description/assets/part_2.stl"/>
+        <mesh filename="package://edubot_description/assets/plug_mount.stl"/>
       </geometry>
-      <material name="part_2_material">
+      <material name="plug_mount_material">
         <color rgba="0.647059 0.647059 0.647059 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="-8.57087e-06 9.61595e-07 -5.51718e-05" rpy="0 -0 0"/>
+      <origin xyz="0.000399038 -8.34454e-05 -5.51718e-05" rpy="0 -0 1.5708"/>
       <geometry>
-        <mesh filename="package://edubot_description/assets/part_2.stl"/>
+        <mesh filename="package://edubot_description/assets/plug_mount.stl"/>
       </geometry>
     </collision>
-    <!-- Part rear_axle_4 -->
+    <!-- Part axle_4 -->
     <visual>
-      <origin xyz="0.0119779 -0.19069 0.018986" rpy="0 -0 -1.5708"/>
+      <origin xyz="0.19109 0.011903 0.018986" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://edubot_description/assets/rear_axle.stl"/>
+        <mesh filename="package://edubot_description/assets/axle.stl"/>
       </geometry>
-      <material name="rear_axle_4_material">
+      <material name="axle_4_material">
         <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0119779 -0.19069 0.018986" rpy="0 -0 -1.5708"/>
+      <origin xyz="0.19109 0.011903 0.018986" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://edubot_description/assets/rear_axle.stl"/>
+        <mesh filename="package://edubot_description/assets/axle.stl"/>
       </geometry>
     </collision>
   </link>
@@ -131,7 +323,7 @@
     </inertial>
     <!-- Part omni_wheel_fl -->
     <visual>
-      <origin xyz="0.0859713 -0.15763 0.297561" rpy="-1.5708 -0 -0"/>
+      <origin xyz="0.0859713 -0.15763 0.297561" rpy="-1.5708 0 -0"/>
       <geometry>
         <mesh filename="package://edubot_description/assets/omni_wheel_fl.stl"/>
       </geometry>
@@ -140,15 +332,15 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0859713 -0.15763 0.297561" rpy="-1.5708 -0 -0"/>
+      <origin xyz="0.0859713 -0.15763 0.297561" rpy="-1.5708 0 -0"/>
       <geometry>
         <mesh filename="package://edubot_description/assets/omni_wheel_fl.stl"/>
       </geometry>
     </collision>
   </link>
-  <!-- Joint from base to omni_wheel_fl -->
+  <!-- Joint from base_link to omni_wheel_fl -->
   <joint name="wheel_fl" type="continuous">
-    <origin xyz="0.0924914 -0.087 0.0185" rpy="-0 -1.5708 0"/>
+    <origin xyz="0.0874013 0.0924166 0.0196934" rpy="1.5708 -1.53297 -0"/>
     <parent link="base_link"/>
     <child link="omni_wheel_fl"/>
     <axis xyz="0 0 1"/>
@@ -163,7 +355,7 @@
     </inertial>
     <!-- Part omni_wheel_rl -->
     <visual>
-      <origin xyz="-0.106119 0.157984 -0.140943" rpy="1.5708 -0 0"/>
+      <origin xyz="-0.106119 0.157984 -0.140943" rpy="1.5708 0 0"/>
       <geometry>
         <mesh filename="package://edubot_description/assets/omni_wheel_rl.stl"/>
       </geometry>
@@ -172,15 +364,15 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.106119 0.157984 -0.140943" rpy="1.5708 -0 0"/>
+      <origin xyz="-0.106119 0.157984 -0.140943" rpy="1.5708 0 0"/>
       <geometry>
         <mesh filename="package://edubot_description/assets/omni_wheel_rl.stl"/>
       </geometry>
     </collision>
   </link>
-  <!-- Joint from base to omni_wheel_rl -->
+  <!-- Joint from base_link to omni_wheel_rl -->
   <joint name="wheel_rl" type="continuous">
-    <origin xyz="0.0897148 0.086999 0.0184759" rpy="-1.5708 -0 1.5708"/>
+    <origin xyz="-0.086599 0.0896399 0.0184759" rpy="-1.5708 -0 -3.14159"/>
     <parent link="base_link"/>
     <child link="omni_wheel_rl"/>
     <axis xyz="0 0 1"/>
@@ -195,7 +387,7 @@
     </inertial>
     <!-- Part omni_wheel_rr -->
     <visual>
-      <origin xyz="0.0859713 0.15763 -0.140943" rpy="1.5708 -0 0"/>
+      <origin xyz="0.0859713 0.15763 -0.140943" rpy="1.5708 0 0"/>
       <geometry>
         <mesh filename="package://edubot_description/assets/omni_wheel_rr.stl"/>
       </geometry>
@@ -204,15 +396,15 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0859713 0.15763 -0.140943" rpy="1.5708 -0 0"/>
+      <origin xyz="0.0859713 0.15763 -0.140943" rpy="1.5708 0 0"/>
       <geometry>
         <mesh filename="package://edubot_description/assets/omni_wheel_rr.stl"/>
       </geometry>
     </collision>
   </link>
-  <!-- Joint from base to omni_wheel_rr -->
+  <!-- Joint from base_link to omni_wheel_rr -->
   <joint name="wheel_rr" type="continuous">
-    <origin xyz="-0.0897148 0.087001 0.0184759" rpy="1.5708 -0 1.5708"/>
+    <origin xyz="-0.086601 -0.0897897 0.0184759" rpy="1.5708 -0 -3.14159"/>
     <parent link="base_link"/>
     <child link="omni_wheel_rr"/>
     <axis xyz="0 0 1"/>
@@ -227,7 +419,7 @@
     </inertial>
     <!-- Part omni_wheel_fr -->
     <visual>
-      <origin xyz="-0.106119 -0.157274 0.296978" rpy="-1.5708 0 0"/>
+      <origin xyz="-0.106119 -0.157274 0.296978" rpy="-1.5708 -0 -0"/>
       <geometry>
         <mesh filename="package://edubot_description/assets/omni_wheel_fr.stl"/>
       </geometry>
@@ -236,15 +428,15 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.106119 -0.157274 0.296978" rpy="-1.5708 0 0"/>
+      <origin xyz="-0.106119 -0.157274 0.296978" rpy="-1.5708 -0 -0"/>
       <geometry>
         <mesh filename="package://edubot_description/assets/omni_wheel_fr.stl"/>
       </geometry>
     </collision>
   </link>
-  <!-- Joint from base to omni_wheel_fr -->
+  <!-- Joint from base_link to omni_wheel_fr -->
   <joint name="wheel_fr" type="continuous">
-    <origin xyz="-0.0897148 -0.086999 0.0184759" rpy="-3.14159 -1.5708 0"/>
+    <origin xyz="0.087399 -0.0897897 0.0184759" rpy="-1.5708 -1.5708 0"/>
     <parent link="base_link"/>
     <child link="omni_wheel_fr"/>
     <axis xyz="0 0 1"/>

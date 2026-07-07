@@ -2,12 +2,12 @@
     "configuration": "default",
     "documentId": "244f5ecfaccb481348bd4c8c",
     "documentMicroversion": "2e1e8108eaa1316d078ef7a1",
-    "elementId": "3da784a328766107b82dd1c2",
+    "elementId": "778452a0be6128d19cda1838",
     "fullConfiguration": "default",
-    "id": "M2UX8LY5uS9vF5bA9",
+    "id": "MioNWMWbc3DTboUPT",
     "isStandardContent": false,
-    "name": "Omni_Wheel_RR <6>",
-    "partId": "JFD",
+    "name": "right_plate <3>",
+    "partId": "JlD",
     "suppressed": false,
     "type": "Part"
 }

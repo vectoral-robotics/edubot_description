@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <!-- Generated using onshape-to-robot -->
 <!-- Onshape https://cad.onshape.com/documents/244f5ecfaccb481348bd4c8c/w/26ba82ba5ad81d26c481a664/e/06b598d0d8b4099a0f4d1c8c -->
-<robot name="omnibot-onshape">
+<robot name="edubot-onshape">
   <!-- Link base_link -->
   <link name="base_link">
     <inertial>

@@ -442,4 +442,15 @@
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10"/>
   </joint>
+
+  <!-- IMU: BNO085 mounted on the Raspberry Pi 5 (top centre of robot).
+       Adjust xyz to match the actual physical position of the chip on the board.
+       x=0 y=0 = robot centre, z=0.065 = approx top of upper plate.
+       rpy=0 0 0 assumes the chip's X-axis points forward (same as base_link). -->
+  <link name="imu_link"/>
+  <joint name="imu_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.065" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+  </joint>
 </robot>

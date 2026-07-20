@@ -1,3 +1,9 @@
+## v0.3.0 (2026-07-20)
+
+### Feat
+
+- **urdf**: add imu_link fixed joint for BNO085
+
 ## v0.2.0 (2026-07-20)
 
 ### Feat
